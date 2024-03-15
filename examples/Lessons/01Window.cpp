@@ -53,7 +53,7 @@ int main()
 	}
 	else
 	{
-		printf("%s/n", result.Message());
+		printf("%s\n", result.Message());
 	}
 
 	return 0;

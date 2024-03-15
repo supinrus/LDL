@@ -76,6 +76,6 @@ void Engine::Run()
 	}
 	else
 	{
-		printf("%s/n", _Result.Message());
+		printf("%s\n", _Result.Message());
 	}
 }
