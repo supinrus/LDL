@@ -80,7 +80,7 @@ struct ArtFrame
 struct ArtFrameInfo : ArtFrame 
 {
 	ArtFrameInfo();
-	uint8_t  pixels[1024 * 32];
+	uint8_t pixels[1024 * 32];
 };
 
 struct ArtFile

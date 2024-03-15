@@ -32,6 +32,7 @@ DEALINGS IN THE SOFTWARE.
 #include <X11/keysym.h>
 
 extern "C" {
+	
 #define GLX_USE_GL		      1
 #define GLX_BUFFER_SIZE		  2
 #define GLX_LEVEL		      3
@@ -50,20 +51,21 @@ extern "C" {
 #define GLX_ACCUM_BLUE_SIZE	  16
 #define GLX_ACCUM_ALPHA_SIZE  17
 
-	typedef XID GLXDrawable;
-	typedef struct __GLXcontextRec* GLXContext;
-	typedef unsigned char	GLubyte;
+typedef XID GLXDrawable;
+typedef struct __GLXcontextRec* GLXContext;
+typedef unsigned char	GLubyte;
 
 #define GLX_SAMPLE_BUFFERS              0x186a0 /*100000*/
 #define GLX_SAMPLES                     0x186a1 /*100001*/
 
-	extern Bool glXQueryVersion(Display* dpy, int* maj, int* min);
-	extern XVisualInfo* glXChooseVisual(Display* dpy, int screen, int* attribList);
-	extern GLXContext glXCreateContext(Display* dpy, XVisualInfo* vis, GLXContext shareList, Bool direct);
-	extern void glXDestroyContext(Display* dpy, GLXContext ctx);
-	extern Bool glXMakeCurrent(Display* dpy, GLXDrawable drawable, GLXContext ctx);
-	extern void glXSwapBuffers(Display* dpy, GLXDrawable drawable);
-	extern void (*glXGetProcAddress(const GLubyte* procname))(void);
+extern Bool glXQueryVersion(Display* dpy, int* maj, int* min);
+extern XVisualInfo* glXChooseVisual(Display* dpy, int screen, int* attribList);
+extern GLXContext glXCreateContext(Display* dpy, XVisualInfo* vis, GLXContext shareList, Bool direct);
+extern void glXDestroyContext(Display* dpy, GLXContext ctx);
+extern Bool glXMakeCurrent(Display* dpy, GLXDrawable drawable, GLXContext ctx);
+extern void glXSwapBuffers(Display* dpy, GLXDrawable drawable);
+extern void (*glXGetProcAddress(const GLubyte* procname))(void);
+
 }
 
 #endif
