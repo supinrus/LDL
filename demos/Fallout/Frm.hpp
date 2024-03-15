@@ -44,7 +44,7 @@ struct FrmFile
 	uint16_t frames_per_direction;
 	uint16_t shift_x[FrmFile::Max];
 	uint16_t shift_y[FrmFile::Max];
-	uint16_t offset[FrmFile::Max];
+	uint32_t offset[FrmFile::Max];
 	uint32_t size;
 	uint32_t dirs;
 };

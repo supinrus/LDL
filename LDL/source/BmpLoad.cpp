@@ -160,7 +160,7 @@ bool LDL_BmpLoader::CheckInfoHeader()
 	fread(&_InfoHeader.biClrImportant, sizeof(_InfoHeader.biClrImportant), 1, _Input);
 
 	_Size = LDL_Vec2i(_InfoHeader.biWidth, _InfoHeader.biHeight);
-	_Bpp = _InfoHeader.biBitCount / 8;
+	_Bpp  = uint8_t(_InfoHeader.biBitCount / 8);
 
 	return _Result->Ok();
 }
