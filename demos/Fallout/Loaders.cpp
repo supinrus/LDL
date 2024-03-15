@@ -70,8 +70,9 @@ Sprite* SpriteLoader::GetSprite(const char* path)
 		_FrmReader->ReadFrmFrame(&_FrmFrame);
 
 		result = new Sprite();
-
-		LDL_Texture* texture = new LDL_Texture(LDL_Vec2i(_FrmFrame.width, _FrmFrame.height), _FrmFrame.indexes, _Palette, &LDL_Alpha(0));
+		
+		LDL_Alpha alpha(0);
+		LDL_Texture* texture = new LDL_Texture(LDL_Vec2i(_FrmFrame.width, _FrmFrame.height), _FrmFrame.indexes, _Palette, &alpha);
 		
 		SpriteFrame* frame = new SpriteFrame(texture);
 		

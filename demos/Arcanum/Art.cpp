@@ -25,6 +25,7 @@ DEALINGS IN THE SOFTWARE.
 */
 
 #include "Art.hpp"
+#include <string.h>
 
 ArtColor::ArtColor() :
 	b(0),
@@ -134,7 +135,7 @@ void ArtReader::Read(ArtFrameInfo* dest, ArtFile* src, size_t index)
 		int readOrRepeatCount = chunkInfo & 0x7F;
 		bool isRepeat = (chunkInfo & 0x80) == 0;
 
-		byte c = 0x00;
+		uint8_t c = 0x00;
 		for (int i = 0; i < readOrRepeatCount; i++)
 		{
 			if (!isRepeat || i == 0)
