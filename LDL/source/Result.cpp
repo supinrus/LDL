@@ -56,8 +56,7 @@ void LDL_ResultImpl::Message(const char* message, const char* detail)
 
 	_Ok = false;
 
-	size_t count = strlen(message) + strlen(detail);
-	assert(count < Max);
+	assert((strlen(message) + strlen(detail)) < Max);
 
 	strcpy(_Message, message);
 	strcat(_Message, detail);

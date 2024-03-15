@@ -48,7 +48,7 @@ bool LDL_EventQueue::IsFull()
 	return _Length == _Capacity;
 }
 
-size_t LDL_EventQueue::NextPosition(size_t position)
+int LDL_EventQueue::NextPosition(int position)
 {
 	return (position + 1) % _Capacity;
 }

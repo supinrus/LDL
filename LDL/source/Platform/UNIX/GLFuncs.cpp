@@ -30,12 +30,10 @@ DEALINGS IN THE SOFTWARE.
 
 LDL_OpenGLFunctions::LDL_OpenGLFunctions()
 {
-	_Library.Open("libGL.so");
 }
 
 LDL_OpenGLFunctions::~LDL_OpenGLFunctions()
 {
-	_Library.Close();
 }
 
 LDL_VoidFuncPtr LDL_OpenGLFunctions::Function(const char* name)

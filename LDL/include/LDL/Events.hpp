@@ -138,15 +138,15 @@ public:
 	LDL_EventQueue();
 	bool IsEmpty();
 	bool IsFull();
-	size_t NextPosition(size_t position);
+	int NextPosition(int position);
 	bool Dequeue(LDL_Event& element);
 	void Enqueue(const LDL_Event& element);
 private:
 	LDL_Event _Content[Max];
-	size_t _Head;
-	size_t _Tail;
-	size_t _Length;
-	size_t _Capacity;
+	int _Head;
+	int _Tail;
+	int _Length;
+	int _Capacity;
 };
 /********************************************************************************************************************************
 														       LDL_Eventer
