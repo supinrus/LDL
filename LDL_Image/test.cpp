@@ -1,4 +1,5 @@
 #include <LDL/LDL_Image.hpp>
+#include <stdio.h>
 
 int main()
 {
@@ -17,5 +18,10 @@ int main()
 		pixels = imageLoader.Pixels();
 	}
 
+	printf("width : %d", width);
+    printf("heigth: %d", heigth);
+    printf("bpp   : %d", bpp);
+    printf("pixels: %p", pixels);
+	
 	return 0;
 }

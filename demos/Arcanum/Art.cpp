@@ -37,17 +37,29 @@ ArtColor::ArtColor() :
 
 ArtFileHeader::ArtFileHeader()
 {
-	memset(this, 0, sizeof(ArtFileHeader));
+	memset(&h0           , 0, sizeof(h0));
+	memset(&stupid_color , 0, sizeof(stupid_color));
+	memset(&frame_num_low, 0, sizeof(frame_num_low));
+	memset(&frame_num    , 0, sizeof(frame_num));
+	memset(&palette_data1, 0, sizeof(palette_data1));
+	memset(&palette_data2, 0, sizeof(palette_data2));
+	memset(&palette_data3, 0, sizeof(palette_data3));
 }
 
-ArtFrame::ArtFrame()
+ArtFrame::ArtFrame() :
+    width(0),
+	height(0),
+	size(0),
+	c_x(0),
+	c_y(0),
+	d_x(0),
+	d_y(0)
 {
-	memset(this, 0, sizeof(ArtFrame));
 }
 
 ArtFrameInfo::ArtFrameInfo()
 {
-	memset(this, 0, sizeof(ArtFrameInfo));
+	memset(&pixels, 0, sizeof(pixels));
 }
 
 ArtReader::ArtReader(LDL_ByteReader* reader) :

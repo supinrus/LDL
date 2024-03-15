@@ -129,8 +129,8 @@ HashItem::HashItem()
 }
 
 Vector::Vector(size_t capacity, size_t elementSize) :
-    _Capacity(capacity),
     _Position(0),
+    _Capacity(capacity),
     _ElementSize(elementSize),
     _Content(NULL)
 {
